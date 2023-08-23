@@ -15,7 +15,10 @@ h2{
 }
 .nav_barre{
     position: fixed;
-    background-color: #3e4245 ;
+    /* background-color: #3e4245 ; */
+    /* background-color: #5D76A9; */
+    background-color: #002244;
+
     margin-top: 0;
     padding: 0;
     top: 0;
@@ -156,9 +159,6 @@ img{
     img{
         width: 30%;
     }
-    /* h1{ */
-        /* font-size: 1em; */
-    /* } */
     span{
         width: 50px;
 
@@ -219,6 +219,12 @@ img{
     #formation .form{
         font-size: 2em;
     }
+    #tech{
+        height: 50vw !important;
+    } 
+    #tech3{
+        height: 50vw !important;
+    }
 }
 @media screen and (min-width:768px) and (max-width:1023px){
     .vue{
@@ -232,6 +238,13 @@ img{
     .titre1 , .titre2{
         font-size: 1.8em;
     }
+    #tech{
+        height: 50vw !important;
+    } 
+    #tech3{
+        height: 50vw !important;
+    }
+
 }
 
 
@@ -272,14 +285,14 @@ h3{ position: relative;
     display: block;
     margin-top: -1.5em;
 }
-h3::before{
-    position: absolute;
-    bottom: 0;
-    content: "";
-    width: 100%;
-    height: 4px;
-    background-color: #85e7f0;
-}
+/* h3::before{ */
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* content: ""; */
+    /* width: 100%; */
+    /* height: 4px; */
+    /* background-color: #85e7f0; */
+/* } */
 /* --------------- formations ------------------ */
 
 #formation{
@@ -354,3 +367,94 @@ h3::before{
     height: 120px;
     width: 4px; 
     }
+    #tech{
+        display: flex;
+        /* display: inline-flexbox; */
+        flex-direction: column;
+        margin-top: 0;
+        background-color: #dedfe3;
+        /* justify-content: flex-start ; */
+        height: 80vw;
+}
+#tech img:nth-child(1){
+    display: inline-block;
+    position: absolute  ;
+    width: 50%
+}
+#tech img:nth-child(2){
+    width: 50%;
+}
+.tech1 img:nth-child(1){
+    position: absolute;
+   animation: image ease-in-out 2000ms both;
+}
+@keyframes image{
+    0%{
+        left: -40%;
+        color: #dedfe3;
+    }
+    100%{
+        left: 50%;
+        color: #85e7f0;
+    }
+}
+.tech1 img:nth-child(2){
+    position: absolute;
+   animation: image1 ease-in-out 2000ms both;
+ }
+ @keyframes image1{
+    0%{
+        right: -40%;
+        color: #dedfe3;
+    }
+    100%{
+        right: 50%;
+        color: #85e7f0;
+    }
+ }
+ .souligner{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+ }
+ .titre-tech{
+    font-size: 2.5em;
+    text-align: center;
+    color: #131419;
+ }
+ .up{
+    font-size: 3em !important;
+ }
+ #tech3{
+    display: inline-block;
+    background-color: #dedfe3;
+    height: 80vw;
+ }
+ .langage{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin: 0 auto;
+ }
+ .premiere{
+    grid-column: 6 span;
+    background-color: #1a1f71;
+    border-radius: 25px;
+    clip-path: polygon(1% 5%, 90% 10%, 88% 53%, 98% 100%, 54% 77%, 0 100%, 0 46%, 24% 75%, 3% 17%);
+ }
+ .deuxieme{
+    grid-column: 6 span;
+    border-radius: 25px;
+ }
+ .titre-tech3{
+    color: #131419;
+    grid-column: 12 span;
+    font-size: 2.5em;
+    text-align: center;
+ }
+.premiere img{
+    width: 100%;
+}
+.deuxieme img{
+    width: 100%;
+}
