@@ -1,0 +1,356 @@
+*,**::after,**::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #131419;
+    overflow-x: hidden;
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #85e7f0;
+}
+.nav_barre{
+    position: fixed;
+    background-color: #3e4245 ;
+    margin-top: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    z-index: 1;
+    overflow-y: hidden;
+}
+.logo_class{
+    grid-column: 2/3;
+}
+.span_class{
+    position: relative;
+    grid-column: 11/12;
+    align-items: center;
+    align-self: flex-start;
+
+}
+.side{
+    display: block;
+    height: 6px;
+    width: 50px;
+    margin-top: .2em;
+    margin-right: 0;
+    background-color: #85e7f0;
+}
+.haut,.bas{
+    margin-top: 2em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.side_barre{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.hidden{
+    position: fixed;
+    background-color: #3e4245;
+    text-align: center;
+    align-items: center;
+    margin-top: 3em;
+    margin-right: .2em;
+    width: 300px;
+    height: 500px;
+    right: -70%;
+    z-index: 1;
+    padding: 0;
+    border-radius: 10px;
+    transition: 1000ms ease-in-out;
+}
+.vue{
+    position: fixed;
+    margin-top: 3em;
+    width: 300px;
+    height: 500px;
+    right: 0%;
+    transition: 500ms ease-out;
+}
+ul li{
+    width: 100%;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+ul li a h2{
+    font-size: 1em;
+    position: relative;
+    display: inline-block;
+}
+a h2::before{
+   position: absolute;
+   height: 0;
+   width: 0;
+   content: "";
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 0;
+   transition: width ease-in-out 500ms;
+}
+a h2:hover::before{
+    height: 4px;
+    width: 100%;
+    background-color: #85e7f0;
+}
+.mesInfo h3, h1{
+    font-size: 1.5em;
+    text-align: center;
+}
+.mesInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 3em;
+    color: #dedfe3;
+}
+h3{
+    color: #85e7f0;
+}
+.image_class{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 55%;
+}
+@media screen and (min-width: 767px){
+    .nom{
+        font-size: 3em;
+    }
+    span{
+        height: 7px;
+        margin-top: .2em;
+        width: 50px;
+    }
+    .vue{
+        margin-top: 3em;
+        width: 300px;
+        height: 500px;
+        border: 2px solid #85e7f0;
+    }
+    .hidden{
+        margin-top: 3em;
+        width: 300px;
+        height: 500px;
+    }
+}
+@media screen  and (min-width:1024px){
+    img{
+        width: 30%;
+    }
+    /* h1{ */
+        /* font-size: 1em; */
+    /* } */
+    span{
+        width: 50px;
+
+    }
+    .hidden{
+        margin-top: 3em;
+        width: 300px;
+        height: 500px;
+    }
+    .vue{
+        right: 0%;
+        width: 300px;
+        height: 500px;
+        margin-top: 3em;
+    }
+    .span_class{
+        grid-column: 12/13;
+    }
+    .form{ 
+            position: relative;
+            display: block;
+
+    }
+    .form::before{
+        position: absolute;
+        bottom: 0;
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: #85e7f0;
+    }
+    .form{
+        position: absolute;
+        animation:titre ease-in-out 1000ms both;
+        transition: 500ms;
+    }
+    @keyframes titre{
+        0%{
+            left: -10%;
+            color: #dedfe3;
+        }
+        100%{
+            left: 40%;
+            color: #85e7f0;
+        }
+    }
+    #formation .form{
+        font-size: 3em;
+
+    }
+    .titre1 , .titre2{
+        font-size: 2em;
+    }
+    #formation{
+        height: 55vw !important ;
+        grid-auto-rows: 8vw !important;
+    }
+    #formation .form{
+        font-size: 2em;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+    .vue{
+        margin-top: 3em;
+        width: 30%;
+        height: 500px;
+    }
+    #formation .form{
+        font-size: 2em;
+    }
+    .titre1 , .titre2{
+        font-size: 1.8em;
+    }
+}
+
+
+.span_class.show span:nth-child(1){
+    transition: 500ms ease-in-out;
+    position: absolute;
+    top: 100%;
+    transform: rotate(45deg);
+    background-color: #85e7f0;
+}
+.span_class.show span:nth-child(2){
+    transition: 500ms ease-in-out;
+    position: absolute;
+    top: 100%;
+    background-color: transparent;
+}
+    
+.span_class.show span:nth-child(3){
+    transition: 500ms ease-in-out;
+    top: 100%;
+    position: absolute;
+    transform: rotate(-45deg);
+    background-color: #85e7f0;
+}
+.transition{
+    margin-top: .5em;
+    height: 100px;
+    width: 100%;
+    background-color: #85e7f080;
+    animation: transition ease-in-out 2000ms both;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    clip-path: polygon(100% 49%, 50% 2%, 100% 2%, 99% 93%, 2% 50%, 2% 100%, 0 92%, 0 24%, 2% 23%);
+}
+
+/* ---------before de h3 ---------------- */
+h3{ position: relative;
+    display: block;
+    margin-top: -1.5em;
+}
+h3::before{
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #85e7f0;
+}
+/* --------------- formations ------------------ */
+
+#formation{
+    background-color: #3e4245;
+    height: 100vw;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: 15vw;
+}
+#form{
+    grid-column: 12 span;
+    grid-row: 1/2;
+    font-size: 1.5em;
+}
+.ligne{
+    font-size: .6em;
+    grid-column: 12 span;
+    grid-row: 2/4  ;
+    display: grid;
+    display: inline-grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: 2vw;
+}
+
+.titre1{
+    grid-column: 2/6;
+    grid-row: 1/2;
+}
+.titre2{
+    grid-column: 8/13;
+    grid-row: 1/2;
+}
+.ligne span:nth-child(1){
+    grid-row: 1/2;
+    grid-column: 7/7;
+    background-color: #85e7f0;
+    display: inline-block;
+    height: 120px;
+    width: 4px; 
+}
+.ligne1{
+    font-size: .6em;
+    grid-column: 12 span;
+    grid-row: 4/6;
+    display: grid;
+    display: inline-grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: 2vw;
+}
+.ligne1 span:nth-child(1){
+    grid-row: 1/2;
+    grid-column: 7/7;
+    background-color: #85e7f0;
+    display: inline-block;
+    height: 120px;
+    width: 4px; }
+
+.ligne3{
+    font-size: .6em;
+    grid-column: 12 span;
+    grid-row: 6/7;
+    display: grid;
+    display: inline-grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: 2vw;
+}
+.ligne3 span:nth-child(1){
+    grid-row: 1/2;
+    grid-column: 7/7;
+    background-color: #85e7f0;
+    display: inline-block;
+    height: 120px;
+    width: 4px; 
+    }
