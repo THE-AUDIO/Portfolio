@@ -8,6 +8,7 @@ body{
     padding: 0;
     background-color: #131419;
     overflow-x: hidden;
+    min-width: 450px;   
 }
 h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -139,7 +140,7 @@ img{
         font-size: 3em;
     }
     span{
-        height: 7px;
+        height: 5px;
         margin-top: .2em;
         width: 50px;
     }
@@ -308,7 +309,7 @@ h3{ position: relative;
     font-size: 1.5em;
 }
 .ligne{
-    font-size: .6em;
+    font-size: .5em;
     grid-column: 12 span;
     grid-row: 2/4  ;
     display: grid;
@@ -334,7 +335,7 @@ h3{ position: relative;
     width: 4px; 
 }
 .ligne1{
-    font-size: .6em;
+    font-size: .5em;
     grid-column: 12 span;
     grid-row: 4/6;
     display: grid;
@@ -351,7 +352,7 @@ h3{ position: relative;
     width: 4px; }
 
 .ligne3{
-    font-size: .6em;
+    font-size: .5em;
     grid-column: 12 span;
     grid-row: 6/7;
     display: grid;
@@ -455,4 +456,15 @@ h3{ position: relative;
 }
 .deuxieme img{
     width: 100%;
+}
+.contacts{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+.contacts h1{
+    grid-column: 12 span;
+}
+.icone{
+    grid-column: 2 span;
+    grid-row: 2/4;
 }
